@@ -51,13 +51,6 @@ M._rules = {
   {'operator', operator},
 }
 
-M._tokenstyles = {
-  longstring = l.STYLE_STRING,
-  deprecated_function = l.STYLE_FUNCTION..',italics',
-  library = l.STYLE_TYPE,
-  deprecated_library = l.STYLE_TYPE..',italics'
-}
-
 local function fold_longcomment(text, pos, line, s, match)
   if match == '[' then
     if line:find('^%[=*%[', s) then return 1 end
